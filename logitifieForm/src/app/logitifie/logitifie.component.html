@@ -1,0 +1,126 @@
+<p>logitifie works!</p>
+<div>
+  <mat-card>
+    <form>
+      <div>
+        <h3 style="margin-left:2%">Application</h3>
+        <div class="flex">
+          <div class="flexRow">
+            <mat-form-field floatLabel="always" >
+              <mat-label>Company Name</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+          <div class="flexRow">
+            <mat-form-field  floatLabel="always">
+              <mat-label>Office Address</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="flexRow1">
+            <mat-form-field floatLabel="always" >
+              <mat-label>First Name</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+          <div class="flexRow1">
+            <mat-form-field floatLabel="always" >
+              <mat-label>Last Name</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+          <div class="flexRow1">
+            <mat-form-field floatLabel="always" >
+              <mat-label>Phone Number</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+          <div class="flexRow1">
+            <mat-form-field floatLabel="always" >
+              <mat-label>Alt Phone Number</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="flexRow1">
+            <mat-form-field floatLabel="always" >
+              <mat-label>Email Address</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+          <div class="flexRow1">
+            <mat-form-field floatLabel="always" >
+              <mat-label>User Name</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+          <div class="flexRow1">
+            <mat-form-field floatLabel="always" >
+              <mat-label>Passwords</mat-label>
+              <input matInput type="password" >
+            </mat-form-field>
+          </div>
+          <div class="flexRow1">
+            <mat-form-field floatLabel="always" >
+              <mat-label type="password">Comfirm Password</mat-label>
+              <input matInput >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="flex">
+         <div class="flexRow1">
+           <mat-form-field floatLabel="always">
+          <mat-label>How Did You Hear About Us?</mat-label>
+          <select matNativeControl >
+            <option value="social media">social media</option>
+            <option value="NewPaper">NewPaper</option>
+            <option value="Friends">Friends</option>
+            <option value="Emoplyer">Emoplyer</option>
+          </select>
+        </mat-form-field>
+      </div>
+      <div class="flexRow1">
+       <mat-form-field >
+        <mat-label>Select Trafic Type</mat-label>
+        <select matNativeControl  >
+          <option value="Congested traffic">Congested traffic</option>
+          <option value="Organized Traffic">Organized Traffic</option>
+          <option value="Heavy motar Vehile">Heavy motar Vehile</option>
+          <option value="Other vehicle">Other Vehile</option>
+        </select>
+       </mat-form-field>
+      </div>
+      <div class="flexRow1">
+        <mat-form-field
+        floatLabel="always">
+        <mat-label>Select Payment Type</mat-label>
+        <select matNativeControl >
+          <option label="--select  --"></option>
+          <option value="Debit Card">Debit Card</option>
+          <option value="Credit Card">Credit Card</option>
+          <option value="Modile Payment">Modile Payment</option>
+          <option value="Electronic Bank Transfer">
+            Electronic Bank Transfer
+          </option>
+        </select>
+      </mat-form-field>
+      </div>
+      <div class="flexRow1">
+        <mat-form-field floatLabel="always">
+           <mat-label>Choose file</mat-label>
+          <input matInput >
+          <button mat-icon-button matSuffix type="button" (click)="fileInput.click()" >
+              <mat-icon>attach_file</mat-icon>
+          </button>
+          <input hidden  #fileInput type="file" id="file">
+        </mat-form-field>
+      </div>
+        </div>
+        
+      </div>
+    </form>
+  </mat-card>
+</div>
