@@ -1,7 +1,7 @@
 <!-- <p>logitifie-form works!</p> -->
 <div class="container">
 <mat-card>
-    <form>
+    <form [formGroup]="form"(ngSubmit)="saveDetails(form)">
       <div class="m">
         <h2>Application</h2>
         <div fxLayout="row"fxLayoutGap="2%" fxLayoutGap.xs="2%" >
@@ -9,14 +9,15 @@
           <mat-label>Company Name</mat-label>
           <br>
           <mat-form-field appearance="outline">
-            <input matInput >
+            <input matInput formControlName="companyName" >
+            <mat-error>please fill up</mat-error>
           </mat-form-field>
         </div>
         <div class="flex">
           <mat-label>Office Address</mat-label>
           <br>
           <mat-form-field  appearance="outline">
-          <input matInput >
+          <input matInput formControlName="officeAddress">
           </mat-form-field>
         </div>
         <div fxLayout="row">
@@ -31,28 +32,28 @@
           <mat-label>First Name</mat-label>
           <br>
           <mat-form-field appearance="outline" >
-            <input matInput >
+            <input matInput formControlName="fname">
           </mat-form-field>
         </div>
         <div class="flex1">
           <mat-label>Last Name</mat-label>
           <br>
           <mat-form-field appearance="outline" >
-            <input matInput >
+            <input matInput formControlName="lname" >
           </mat-form-field>
         </div>
         <div class="flex1">
           <mat-label>Phone Number</mat-label>
           <br>
           <mat-form-field appearance="outline" >
-            <input matInput >
+            <input matInput formControlName="phoneNo">
           </mat-form-field>
         </div>
         <div class="flex1">
           <mat-label>Alt Phone Number</mat-label>
           <br>
           <mat-form-field appearance="outline" >
-            <input matInput >
+            <input matInput formControlName="altphoneNo">
           </mat-form-field>
         </div>
       </div>
@@ -61,14 +62,14 @@
           <mat-label>Email Address</mat-label>
           <br>
           <mat-form-field appearance="outline" >
-            <input matInput >
+            <input matInput formControlName="email">
           </mat-form-field>
         </div>
         <div class="flex1">
           <mat-label>User Name</mat-label>
           <br>
           <mat-form-field appearance="outline" >
-            <input matInput >
+            <input matInput formControlName="userName">
           </mat-form-field>
         </div>
         <div class="flex1">
@@ -76,11 +77,12 @@
           <br>
           <mat-form-field appearance="outline" >
             <!-- <input matInput > -->
-            <input matInput [type]="showPassword? 'password' : 'text'">
+            <input matInput  [type]="showPassword? 'password' : 'text'" formControlName="password">
             <button mat-icon-button matSuffix (click)="showPassword= !showPassword" [attr.aria-label]="'showPasswordpassword'"
-              [attr.aria-pressed]="showPassword" >
+              [attr.aria-pressed]="showPassword" type="button" >
               <mat-icon style="color:red">{{showPassword? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
+            <mat-error *ngIf="form.value.password">Password invalid</mat-error>
           </mat-form-field>
         </div>
         <div class="flex1">
@@ -88,9 +90,9 @@
           <br>
           <mat-form-field appearance="outline" >
             <!-- <input matInput > -->
-            <input matInput [type]="hide? 'password' : 'text'">
+            <input matInput [type]="hide? 'password' : 'text'" formControlName="confirm_password">
             <button mat-icon-button matSuffix (click)="hide= !hide" [attr.aria-label]="'hidepassword'"
-              [attr.aria-pressed]="hide" >
+              [attr.aria-pressed]="hide"  type="button">
               <mat-icon style="color:red">{{hide? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
           </mat-form-field>
@@ -101,7 +103,7 @@
           <mat-label>How Did You Hear About Us?</mat-label>
        <br>
         <mat-form-field appearance="outline">
-        <select matNativeControl >
+        <select matNativeControl  formControlName="hearAbout">
          <option label="- - select - -"></option>
          <option value="social media">social media</option>
          <option value="NewPaper">NewPaper</option>
@@ -114,7 +116,7 @@
     <mat-label>Select Trafic Type</mat-label>
     <br>
     <mat-form-field appearance="outline">
-     <select matNativeControl>
+     <select matNativeControl formControlName="traficType">
        <option label="- -select  - -"></option>
        <option value="Congested traffic">Congested traffic</option>
        <option value="Organized Traffic">Organized Traffic</option>
@@ -127,7 +129,7 @@
     <mat-label >Select Payment Type</mat-label>
     <br>
      <mat-form-field appearance="outline">
-     <select matNativeControl >
+     <select matNativeControl  formControlName="paymentType">
        <option label="- -select - -"></option>
        <option value="Debit Card">Debit Card</option>
        <option value="Credit Card">Credit Card</option>
@@ -142,7 +144,7 @@
     <mat-label>Choose file</mat-label>
     <br>
      <mat-form-field appearance="outline">
-       <input matInput  >
+       <input matInput formControlName="file" >
        <button mat-icon-button matSuffix type="button" (click)="fileInput.click()">
            <mat-icon>attach_file</mat-icon>
        </button>
@@ -159,7 +161,7 @@
         </div>
       <div  style="margin-right: 2%;" >
         <mat-card-actions>
-          <button mat-button class="button"  >Next <mat-icon>arrow_right_alt</mat-icon></button>
+          <button mat-button class="button" type="submit"  >Next <mat-icon>arrow_right_alt</mat-icon></button>
         </mat-card-actions>
 
       </div>
