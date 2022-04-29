@@ -8,11 +8,13 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogitifieComponent } from './logitifie/logitifie.component';
 import { FormComponent } from './form/form.component';
+import { LogitifieFormComponent } from './logitifie-form/logitifie-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     LogitifieComponent,
-    FormComponent
+    FormComponent,
+    LogitifieFormComponent
   ],
   imports: [
     BrowserModule,
