@@ -1,0 +1,61 @@
+<p>form works!</p>
+<mat-card>
+
+</mat-card>
+<mat-form-field floatLabel="always" appearance="outline" >
+  <mat-label>Password</mat-label>
+  <!-- <input matInput [type]="showPassword ? 'text' : 'password'" name="password">
+ <mat-icon matSuffix (click)="togglePasswordVisibility()">
+  {{showPassword?'visibility_off':'visibility'}}
+ </mat-icon> -->
+ <input matInput [type]="showPassword? 'password' : 'text'">
+<button mat-icon-button matSuffix (click)="showPassword= !showPassword" [attr.aria-label]="'showPasswordpassword'"
+  [attr.aria-pressed]="showPassword" style="background-color:white ;display:box">
+  <mat-icon style="color:red">{{showPassword? 'visibility_off' : 'visibility'}}</mat-icon>
+</button>
+</mat-form-field>
+<h1>Input with Prefix Select (Broken)</h1>
+<div>
+    <mat-form-field appearance="outline">
+      <mat-select [(value)]="selection">
+        <mat-option value="Foo">Foo</mat-option>
+        <mat-option value="Bar">Bar</mat-option>
+        <mat-option value="Baz">Baz</mat-option>
+      </mat-select>
+      <input matInput placeholder="Input..." autocomplete="off">
+      <mat-hint>*Clicking the input incorrectly activates the select.</mat-hint>
+   </mat-form-field>
+</div>
+
+<h1>Input with Postfix Select (Working)</h1>
+<div>
+    <mat-form-field appearance="outline">
+      <mat-select [(value)]="selection" >
+        <mat-option value="Foo">Foo</mat-option>
+        <mat-option value="Bar">Bar</mat-option>
+        <mat-option value="Baz">Baz</mat-option>
+      </mat-select>
+      <input matInput placeholder="Input..." autocomplete="off">
+
+    <mat-hint>*Works as expected :)</mat-hint>
+   </mat-form-field>
+</div>
+<div fxLayout="row wrap">
+  <div class="box">hhhhh</div>
+  <div class="box">hhhh</div>
+  <div class="box">hello</div>
+</div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div role="separator" class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div>
+

@@ -11,8 +11,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [],
   imports: [
@@ -27,7 +27,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSelectModule,
     MatRadioModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatSlideToggleModule,
+    FlexLayoutModule
 
   ],
   exports: [
@@ -42,7 +44,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSelectModule,
     MatRadioModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+   MatSlideToggleModule,
+   FlexLayoutModule
 ]
 })
 export class NgMaterialModule { }

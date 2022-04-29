@@ -3,7 +3,7 @@
   <mat-card>
     <form>
       <div>
-        <h3 style="margin-left:2%">Application</h3>
+        <h3>Application</h3>
         <div class="flex">
           <div class="flexRow">
             <mat-form-field floatLabel="always" >
@@ -11,11 +11,19 @@
               <input matInput >
             </mat-form-field>
           </div>
-          <div class="flexRow">
+          <div class="flexRow ">
             <mat-form-field  floatLabel="always">
               <mat-label>Office Address</mat-label>
               <input matInput >
             </mat-form-field>
+          </div>
+          <div class="flexRow5">
+            <div class="flex1">
+            <button class="btn" mat-button color="primary">+</button>
+            <button class="btn" mat-fab color="warn" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
           </div>
         </div>
         <div class="flex">
@@ -59,14 +67,26 @@
           </div>
           <div class="flexRow1">
             <mat-form-field floatLabel="always" >
-              <mat-label>Passwords</mat-label>
-              <input matInput type="password" >
+              <mat-label>Password</mat-label>
+              <!-- <input matInput [type]="showPassword ? 'text' : 'password'" name="password">
+             <mat-icon matSuffix (click)="togglePasswordVisibility()">
+              {{showPassword?'visibility_off':'visibility'}}
+             </mat-icon> -->
+             <input matInput [type]="showPassword? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="showPassword= !showPassword" [attr.aria-label]="'showPasswordpassword'"
+              [attr.aria-pressed]="showPassword" style="background-color:white ;display:box">
+              <mat-icon style="color:red">{{showPassword? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
             </mat-form-field>
           </div>
           <div class="flexRow1">
             <mat-form-field floatLabel="always" >
               <mat-label type="password">Comfirm Password</mat-label>
-              <input matInput >
+              <input matInput [type]="hide? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide= !hide" [attr.aria-label]="'hidepassword'"
+                [attr.aria-pressed]="hide" style="background-color:white ;display:box">
+                <mat-icon style="color:red">{{hide? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
             </mat-form-field>
           </div>
         </div>
@@ -74,7 +94,9 @@
          <div class="flexRow1">
            <mat-form-field floatLabel="always">
           <mat-label>How Did You Hear About Us?</mat-label>
+          <br>
           <select matNativeControl >
+            <option label="--select  --"></option>
             <option value="social media">social media</option>
             <option value="NewPaper">NewPaper</option>
             <option value="Friends">Friends</option>
@@ -82,10 +104,12 @@
           </select>
         </mat-form-field>
       </div>
-      <div class="flexRow1">
-       <mat-form-field >
+      <div class="flexRow1" >
+       <mat-form-field floatLabel="always">
         <mat-label>Select Trafic Type</mat-label>
+        <br>
         <select matNativeControl  >
+          <option label="--select  --"></option>
           <option value="Congested traffic">Congested traffic</option>
           <option value="Organized Traffic">Organized Traffic</option>
           <option value="Heavy motar Vehile">Heavy motar Vehile</option>
@@ -96,7 +120,8 @@
       <div class="flexRow1">
         <mat-form-field
         floatLabel="always">
-        <mat-label>Select Payment Type</mat-label>
+        <mat-label >Select Payment Type</mat-label>
+        <br>
         <select matNativeControl >
           <option label="--select  --"></option>
           <option value="Debit Card">Debit Card</option>
@@ -110,16 +135,25 @@
       </div>
       <div class="flexRow1">
         <mat-form-field floatLabel="always">
-           <mat-label>Choose file</mat-label>
-          <input matInput >
-          <button mat-icon-button matSuffix type="button" (click)="fileInput.click()" >
+          <mat-label>Choose file</mat-label>
+          <input matInput  >
+          <button mat-icon-button matSuffix type="button" (click)="fileInput.click()">
               <mat-icon>attach_file</mat-icon>
           </button>
-          <input hidden  #fileInput type="file" id="file">
+          <input hidden (change)="selectFile($event)" #fileInput type="file" id="file">
         </mat-form-field>
       </div>
         </div>
-        
+        <div style="margin-left:2%">
+          <mat-label>Terms and Conditions Accepted?</mat-label>
+          <mat-slide-toggle
+          [checked]="checked"
+          [disabled]="disabled">
+         </mat-slide-toggle>
+          </div>
+        <div >
+          <button mat-button class="button" >Next</button>
+        </div>
       </div>
     </form>
   </mat-card>

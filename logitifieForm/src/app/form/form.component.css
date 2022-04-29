@@ -1,0 +1,12 @@
+
+
+div ::ng-deep .mat-form-field-infix {
+  display: flex;
+}
+.box{
+  width:30%;
+  height: 500px;
+  border: 2px dotted blue;
+  margin-left: 4%;
+
+}

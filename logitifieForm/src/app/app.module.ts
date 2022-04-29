@@ -7,10 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgMaterialModule } from './ng-material/ng-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogitifieComponent } from './logitifie/logitifie.component';
+import { FormComponent } from './form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LogitifieComponent
+    LogitifieComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
