@@ -10,8 +10,7 @@ const routes: Routes = [
   {path:'',redirectTo:'logitifie',pathMatch:'full'},
   {
     path:'form',component:FormComponent
-  },
-  {path:'logitifieForm',component:LogitifieFormComponent},
+  },{path:'logitifieForm',component:LogitifieFormComponent},
   {path:'logitifie1',component:Logitifie1Component}
 ];
 
