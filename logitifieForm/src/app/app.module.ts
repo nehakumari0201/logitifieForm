@@ -9,12 +9,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogitifieComponent } from './logitifie/logitifie.component';
 import { FormComponent } from './form/form.component';
 import { LogitifieFormComponent } from './logitifie-form/logitifie-form.component';
+import { Logitifie1Component } from './logitifie1/logitifie1.component';
 @NgModule({
   declarations: [
     AppComponent,
     LogitifieComponent,
     FormComponent,
-    LogitifieFormComponent
+    LogitifieFormComponent,
+    Logitifie1Component
   ],
   imports: [
     BrowserModule,
