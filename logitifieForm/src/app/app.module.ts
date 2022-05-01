@@ -10,13 +10,15 @@ import { LogitifieComponent } from './logitifie/logitifie.component';
 import { FormComponent } from './form/form.component';
 import { LogitifieFormComponent } from './logitifie-form/logitifie-form.component';
 import { Logitifie1Component } from './logitifie1/logitifie1.component';
+import { SideNavMenuComponent } from './side-nav-menu/side-nav-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
     LogitifieComponent,
     FormComponent,
     LogitifieFormComponent,
-    Logitifie1Component
+    Logitifie1Component,
+    SideNavMenuComponent
   ],
   imports: [
     BrowserModule,
