@@ -16,6 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {MatMenuModule} from '@angular/material/menu';
     FlexLayoutModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatToolbarModule
 
   ],
   exports: [
@@ -57,7 +59,8 @@ import {MatMenuModule} from '@angular/material/menu';
    FlexLayoutModule,
    MatSidenavModule,
    MatListModule,
-   MatMenuModule
+   MatMenuModule,
+   MatToolbarModule
 
 ]
 })

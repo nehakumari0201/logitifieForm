@@ -1,0 +1,17 @@
+mat-sidenav
+{
+  background: #01054F;
+  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.45);
+  /* color:white; */
+}
+mat-nav-list>a
+{
+  color: white;
+  font-size: large;
+
+}
+mat-toolbar
+{
+  background: #FFFFFF;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.45);
+}
