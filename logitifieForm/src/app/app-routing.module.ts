@@ -1,3 +1,4 @@
+import { SideNavMenuComponent } from './side-nav-menu/side-nav-menu.component';
 import { Logitifie1Component } from './logitifie1/logitifie1.component';
 import { FormComponent } from './form/form.component';
 import { LogitifieComponent } from './logitifie/logitifie.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {
     path:'form',component:FormComponent
   },{path:'logitifieForm',component:LogitifieFormComponent},
-  {path:'logitifie1',component:Logitifie1Component}
+  {path:'logitifie1',component:Logitifie1Component},
+  {path:'sideNavMenu' ,component:SideNavMenuComponent}
 ];
 
 @NgModule({
