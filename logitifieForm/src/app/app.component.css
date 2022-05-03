@@ -24,3 +24,13 @@ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.45);
   height: 25px;
   margin-right:5% ;
 }
+.size
+{
+  width:12%;
+}
+.btn{
+  background: #01054F;
+  color:white;
+  font-size: larger;
+  font-weight: bold;
+}
