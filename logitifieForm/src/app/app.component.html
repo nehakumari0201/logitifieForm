@@ -11,9 +11,9 @@
 <mat-sidenav-container  >
   <mat-sidenav #sidenav mode="side" opened style="width:12%">
     <mat-nav-list>
-      <a mat-list-item>Summary</a>
-      <a mat-list-item>Clear Bookings</a>
-      <a mat-list-item [matMenuTriggerFor]="belowMenu">Client
+      <a mat-list-item> <img src="../assets/images/contract (2) 1.png" class="design">Summary</a>
+      <a mat-list-item> <img src="../assets/images/booking (1) 1.png" class="design">Clear Bookings</a>
+      <a mat-list-item [matMenuTriggerFor]="belowMenu">  <img src="../assets/images/Ellipse 9.png" class="design">Client
       <mat-menu #belowMenu="matMenu" yPosition="below">
         <button mat-menu-item>Corporate</button>
         <button mat-menu-item>Individual</button>
@@ -21,7 +21,7 @@
         <button mat-menu-item>New Application</button>
       </mat-menu>
       </a>
-      <a mat-list-item [matMenuTriggerFor]="drivers">Driver
+      <a mat-list-item [matMenuTriggerFor]="drivers"><img src="../assets/images/driver 1.png" class="design">Driver
         <mat-menu #drivers="matMenu" yPosition="below">
           <button mat-menu-item>Fleet Driver</button>
           <button mat-menu-item>Owner Driver</button>
@@ -29,12 +29,12 @@
           <button mat-menu-item>Application</button>
         </mat-menu>
         </a>
-        <a mat-list-item [matMenuTriggerFor]="CRM">CRM
+        <a mat-list-item [matMenuTriggerFor]="CRM">  <img src="../assets/images/partnership 1.png" class="design">CRM
           <mat-menu #CRM="matMenu" yPosition="below">
             <button mat-menu-item>Salesman Summary</button>
           </mat-menu>
           </a>
-          <a mat-list-item [matMenuTriggerFor]="finance">Finance
+          <a mat-list-item [matMenuTriggerFor]="finance"> <img src="../assets/images/Ellipse 16.png" class="design">Finance
             <mat-menu #finance="matMenu" yPosition="below">
               <button mat-menu-item>Finance report</button>
               <button mat-menu-item>Invoice Summary</button>
@@ -43,14 +43,14 @@
               <button mat-menu-item> Driver Payment  summary</button>
             </mat-menu>
             </a>
-            <a mat-list-item [matMenuTriggerFor]="TFL">TFL
+            <a mat-list-item [matMenuTriggerFor]="TFL"> <img src="../assets/images/limousine (2) 1.png" class="design">TFL
               <mat-menu #TFL="matMenu" yPosition="below">
                 <button mat-menu-item>TFL Report Summary</button>
                 <button mat-menu-item> Complaints</button>
                 <button mat-menu-item>Lost Property</button>
               </mat-menu>
               </a>
-              <a mat-list-item>New Bookings</a>
+              <a mat-list-item><img src="../assets/images/car 1.png" class="design">New Bookings</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content style="height:100vh; background-color: white;"><router-outlet></router-outlet></mat-sidenav-content>

@@ -15,3 +15,12 @@ mat-toolbar
   background: #FFFFFF;
 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.45);
 }
+
+.design
+{
+  border:1px solid white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-right:5% ;
+}
